@@ -1,0 +1,91 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch FixedScannerProva",
+            "request": "launch",
+            "mainClass": "FixedScannerProva",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Piano_cartesiano",
+            "request": "launch",
+            "mainClass": "Piano_cartesiano",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch fileFun",
+            "request": "launch",
+            "mainClass": "Tonello_file.fileFun",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch file",
+            "request": "launch",
+            "mainClass": "Tonello_file.file",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrayJava",
+            "request": "launch",
+            "mainClass": "arrayJava",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch cicloJava",
+            "request": "launch",
+            "mainClass": "cicloJava",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch inputProva",
+            "request": "launch",
+            "mainClass": "inputProva",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch metodi",
+            "request": "launch",
+            "mainClass": "metodi",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch primo",
+            "request": "launch",
+            "mainClass": "primo",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch temperatura",
+            "request": "launch",
+            "mainClass": "temperatura",
+            "projectName": "java_5ccf4d6b"
+        },
+        {
+            "type": "java",
+            "name": "Launch variabili",
+            "request": "launch",
+            "mainClass": "variabili",
+            "projectName": "java_5ccf4d6b"
+        }
+    ]
+}

@@ -47,4 +47,11 @@ public class Panino {
         return "nome: " + nome + " prezzo: " + prezzo;
     }
 
+    @Override
+    public String toString(){
+
+        return nome + ": " + prezzo + " ";
+
+    }
+
 }

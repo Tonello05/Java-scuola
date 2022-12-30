@@ -3,16 +3,13 @@
  * Oggetto: classe che rappresenta un servizio
  */
 
-// TODO: aggiustare i metodi che prendono il tempo
-
-
-import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.Random;
 
 public class Servizio {
     
     // --- attributi
-    private Data dataErogazione; 
-    private Ora oraErogazione;
+    private String dataOraErogazione; 
     private Panino[] paninoServito;
     private Persona cliente;
     private int durataServizio;     //contata in secondi
@@ -23,8 +20,7 @@ public class Servizio {
 
         this.paninoServito=paninoServito;
         this.cliente=cliente;
-        oraErogazione = new Ora(Calendar.SECOND, Calendar.MINUTE, Calendar.HOUR_OF_DAY);
-        dataErogazione = new Data(Calendar.DAY_OF_MONTH, Calendar.MONTH, Calendar.YEAR);
+        dataOraErogazione = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
         durataServizio=-1;
 
     }
@@ -34,30 +30,26 @@ public class Servizio {
     public Persona getCliente() {
         return cliente;
     }
-    public Data getDataErogazione() {
-        return dataErogazione;
+    public String getDataOraErogazione() {
+        return dataOraErogazione;
     }
     public int getDurataServizio() {
         return durataServizio;
     }
-    public Ora getOraErogazione() {
-        return oraErogazione;
-    }
+
     public Panino[] getPaninoServito() {
         return paninoServito;
     }
     public void setCliente(Persona cliente) {
         this.cliente = cliente;
     }
-    public void setDataErogazione(Data dataErogazione) {
-        this.dataErogazione = dataErogazione;
+    public void setDataOraErogazione(String dataOraErogazione) {
+        this.dataOraErogazione = dataOraErogazione;
     }
     public void setDurataServizio(int durataServizio) {
         this.durataServizio = durataServizio;
     }
-    public void setOraErogazione(Ora oraErogazione) {
-        this.oraErogazione = oraErogazione;
-    }
+
     public void setPaninoServito(Panino[] paninoServito) {
         this.paninoServito = paninoServito;
     }
@@ -66,16 +58,13 @@ public class Servizio {
 
     public void concludiServizio(){     // quando il servizio è terminato inseriscie automaticamente la sua durata
 
-        int tempoTotale=0;
+        Random rnd = new Random();
+ 
+        durataServizio = rnd.nextInt(3600);
 
-        tempoTotale+=Calendar.SECOND;
-        tempoTotale+=Calendar.MINUTE*60;
-        tempoTotale+=Calendar.HOUR*3600;
-        tempoTotale-=oraErogazione.getSecondi();
-        tempoTotale-=oraErogazione.getMinuti()*60;
-        tempoTotale-=oraErogazione.getOre()*3600;
-
-        durataServizio = tempoTotale;
+    }
+    public String toString(){
+        return cliente.getNome() + " " + cliente.getCognome() + "; panini ordinati: " + paninoServito.length;
 
     }
 

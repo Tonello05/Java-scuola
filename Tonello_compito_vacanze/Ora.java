@@ -37,4 +37,11 @@ public class Ora {
         this.secondi = secondi;
     }
 
+    @Override
+    public String toString(){
+
+        return ore + ":" + minuti + ":" + secondi;
+
+    }
+
 }

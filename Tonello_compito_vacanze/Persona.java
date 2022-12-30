@@ -43,4 +43,11 @@ public class Persona {
         this.nome = nome;
     }
 
+    @Override
+    public String toString(){
+
+        return nome + " " + cognome;
+
+    }
+
 }

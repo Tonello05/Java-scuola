@@ -1,8 +1,10 @@
+/*
+ * Autore: Tonello Samuele
+ * Oggetto: serbatoio
+ */
+
 import java.util.Vector;
 
-/**
- * Serbatoio
- */
 public class Serbatoio {
 
     // -- attributi
@@ -23,7 +25,7 @@ public class Serbatoio {
     public double getContenuto() {
         return contenuto;
     }
-    public void setContenuto(float contenuto) {
+    public void setContenuto(double contenuto) {
         this.contenuto = contenuto;
     }
     public Vector<Integer> getCollegamenti() {
@@ -32,4 +34,15 @@ public class Serbatoio {
     public void setCollegamenti(Vector<Integer> collegamenti) {
         this.collegamenti = collegamenti;
     }
+
+    public void riempiSerbatoio(double quantita, double maxCapacity){
+
+        if(quantita+contenuto<=maxCapacity){
+            contenuto+=quantita;
+        }else{
+            contenuto=maxCapacity;
+        }
+
+    }
+
 }

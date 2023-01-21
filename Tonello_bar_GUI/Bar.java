@@ -73,6 +73,10 @@ public class Bar {
 
     }
 
+    public void nuovoOrdine(Servizio servizio1){
+        servizi.add(servizio1);
+    }
+
     public Servizio completaOrdine(){           //completa l'ordine meno recente
 
         salvaServizio(servizi.get(0));
@@ -93,20 +97,14 @@ public class Bar {
 
         try {
             
-        FileOutputStream fileOut = new FileOutputStream(getTodayFilePath());
+        FileOutputStream fileOut = new FileOutputStream("ServiziSalvati");
         ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
         objectOut.writeObject(servizio1);
         objectOut.close();
     
         } catch (Exception e) {
-            e.printStackTrace();
+            
         }
-
-    }
-
-    public String getTodayFilePath(){ //ottiene il path del file in base al giorno
-
-        return new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new java.util.Date()) + ".txt";
 
     }
 

@@ -1,0 +1,2 @@
+1;latte;latte in polvere;4
+2;aranciata;bibita al gusto arancia;3
